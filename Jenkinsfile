@@ -26,13 +26,13 @@ pipeline {
 				}
 			}
 		}
-	}
-	stage('Deploy') {
-		when {
-			expression { env.GIT_BRANCH == 'origin/main' }
-		}
-		steps {
-			echo 'Deploying...'
+		stage('Deploy') {
+			when {
+				expression { env.GIT_BRANCH == 'origin/main' }
+			}
+			steps {
+				echo 'Deploying...'
+			}
 		}
 	}
 }
